@@ -1,4 +1,4 @@
-exports.OpenRoles = class OpenRoles {
+exports.JoinUs = class JoinUs {
 
     constructor(page) {
         this.page = page;
