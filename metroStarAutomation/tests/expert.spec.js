@@ -25,6 +25,7 @@ test.describe('contact an expert', () => {
     await expert.devSecOpsBtn.click();
     await expert.yourRequestField.fill("Hi there. It's nice to see you again.");
     await expert.submitBtn.click();
+    await expect(expert.contactAnExpertPage).toBeVisible();
     
   });
 

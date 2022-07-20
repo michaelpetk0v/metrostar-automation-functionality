@@ -12,6 +12,7 @@ exports.Expert = class Expert {
         this.devSecOpsBtn = page.locator('[id="select_capabilities2-2fb024fc-9e78-4f77-8c73-0df00e4a4cef"]');
         this.yourRequestField = page.locator('[id="multi_line_text_area-2fb024fc-9e78-4f77-8c73-0df00e4a4cef"]');
         this.submitBtn = page.locator('.hs-submit [type="submit"]');
+        this.contactAnExpertPage = page.locator('text=contact an expert');
     }
     async submit(name, email) {
         await this.nameInput.fill(name);

@@ -21,10 +21,10 @@ test.describe('Search', () => {
         await expect(page).toHaveURL('https://www.metrostar.com/search-results/?ss360Query=contact%20us');
         await search.contactUsResultBtn.click();
         await search.form(credentials.searchfunction.name, credentials.searchfunction.email);
-        await search.reasonForContactBtn.click();
-        await search.reasonForContactSelect.click();
+        await search.reasonForContactSelect.selectOption('Job Opportunity');
         await search.details(credentials.searchfunction.details);
         await search.submitBtn.click();
+        await expect(search.thankYouPage).toBeVisible();
     });
 
 });

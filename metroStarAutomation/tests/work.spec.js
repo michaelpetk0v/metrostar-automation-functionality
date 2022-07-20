@@ -23,6 +23,7 @@ test.describe('work with us', () => {
         await work.healthBtn.click();
         await work.yourRequestField.fill('Hi there.');
         await work.submitBtn.click();
+        await expect(work.missionSuccessPage).toBeVisible();
     });
 
 });

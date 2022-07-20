@@ -11,6 +11,7 @@ exports.Work = class Work {
         this.healthBtn = page.locator('[id="select_industry2-34e3f8c1-de52-4214-9161-0fd9723e857f"]');
         this.yourRequestField = page.locator('[id="multi_line_text_area-34e3f8c1-de52-4214-9161-0fd9723e857f"]');
         this.submitBtn = page.locator('[class="actions"] [type="submit"]');
+        this.missionSuccessPage = page.locator('text=the right team for your mission’s success');
     }
     async form(name, email) {
         await this.nameInput.fill(name);

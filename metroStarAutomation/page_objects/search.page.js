@@ -8,10 +8,10 @@ exports.Search = class Search {
         this.contactUsResultBtn = page.locator('[href="https://www.metrostar.com/contact-us/"] [class="ss360-highlight"]');
         this.nameInput = page.locator('[id="name-997e03ee-df9f-4645-ac6f-2c08f86b62f7"]');
         this.emailInput = page.locator('[id="email-997e03ee-df9f-4645-ac6f-2c08f86b62f7"]');
-        this.reasonForContactBtn = page.locator('[id="reason_for_contact_dropdown-997e03ee-df9f-4645-ac6f-2c08f86b62f7"]');
         this.reasonForContactSelect = page.locator('select[name="reason_for_contact_dropdown"]');
         this.giveUsTheDetailsInput = page.locator('[id="details-997e03ee-df9f-4645-ac6f-2c08f86b62f7"]');
         this.submitBtn = page.locator('.hs-submit [type="submit"]');
+        this.thankYouPage = page.locator('h2:has-text("thank you")');
     }
     async form(name, email) {
         await this.nameInput.fill(name);

@@ -18,7 +18,8 @@ test.describe('Internships', () => {
     await internship.careersBtn.click(); 
     await internship.internshipsBtn.click(); 
     await internship.subscribe(credentials.internship.name, credentials.internship.email); 
-    await internship.subscribeBtn.click(); 
+    await internship.subscribeBtn.click();
+    await expect(internship.thankYouPage).toBeVisible();
 
   });
 

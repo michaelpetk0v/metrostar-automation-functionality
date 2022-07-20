@@ -21,6 +21,7 @@ test.describe('Contact Us', () => {
     await contact.reasonForContactSelect.selectOption('Job Opportunity');
     await contact.info(credentials.contactus.details);
     await contact.sendMessageBtn.click();
+    await expect(contact.thankYouPage).toBeVisible();
     
   });
 

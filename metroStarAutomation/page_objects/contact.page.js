@@ -10,6 +10,7 @@ exports.Contact = class Contact {
         this.reasonForContactSelect = page.locator('select[name="reason_for_contact_dropdown"]');
         this.giveUsDetailsInput = page.locator('[id="details-997e03ee-df9f-4645-ac6f-2c08f86b62f7"]');
         this.sendMessageBtn = page.locator('[data-reactid=".hbspt-forms-0.5.1"] [type="submit"]');
+        this.thankYouPage = page.locator('h2:has-text("thank you")');
     }
     async contacts(name, email) {
         await this.nameInput.fill(name);
