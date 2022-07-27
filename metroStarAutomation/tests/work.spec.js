@@ -14,6 +14,8 @@ test.describe('work with us', () => {
 
     // Test is equivalent of a test case
     test('user should be able to submit form', async ({ page }) => {
+
+        // Test work section
         await work.cookiesBtn.click();
         await work.industriesBtn.click();
         await work.intelligensBtn.click();

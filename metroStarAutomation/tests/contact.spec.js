@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const {Contact} = require('../page_objects/contact.page')
+const { Contact } = require('../page_objects/contact.page')
 const credentials = require('../data/credentials.json');
 let contact;
 
@@ -11,9 +11,11 @@ test.beforeEach(async ({ page }) => {
 
 // Describe is equivalent of a test suite
 test.describe('Contact Us', () => {
-  
+
   // Test is equivalent of a test case
   test('user should be able send message', async ({ page }) => {
+
+    // Test section Contact Us from Contact Us button
     await contact.cookiesBtn.click();
     await contact.contactUsBtn.click();
     await contact.contacts(credentials.contactus.name, credentials.contactus.email);
@@ -22,7 +24,7 @@ test.describe('Contact Us', () => {
     await contact.info(credentials.contactus.details);
     await contact.sendMessageBtn.click();
     await expect(contact.thankYouPage).toBeVisible();
-    
+
   });
 
 });

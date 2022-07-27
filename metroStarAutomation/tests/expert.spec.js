@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const {Expert} = require('../page_objects/expert.page')
+const { Expert } = require('../page_objects/expert.page')
 const credentials = require('../data/credentials.json');
 let expert;
 
@@ -11,9 +11,11 @@ test.beforeEach(async ({ page }) => {
 
 // Describe is equivalent of a test suite
 test.describe('contact an expert', () => {
-  
+
   // Test is equivalent of a test case
   test('user should be able to contact an expert', async ({ page }) => {
+
+    // Test section expert
     await expert.cookiesBtn.click();
     await expert.aboutBtn.click();
     await expert.companyBtn.click();
@@ -26,7 +28,7 @@ test.describe('contact an expert', () => {
     await expert.yourRequestField.fill("Hi there. It's nice to see you again.");
     await expert.submitBtn.click();
     await expect(expert.contactAnExpertPage).toBeVisible();
-    
+
   });
 
 });

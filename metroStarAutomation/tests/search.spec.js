@@ -14,6 +14,8 @@ test.describe('Search', () => {
 
     // Test is equivalent of a test case
     test('user should be able to use search function', async ({ page }) => {
+
+        // Test Contact Us section through search bar
         await search.cookiesBtn.click();
         await search.searchBtn.click();
         await search.searchInput.fill('contact us');

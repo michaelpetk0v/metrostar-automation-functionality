@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const {JoinUs} = require('../page_objects/joinus.page')
+const { JoinUs } = require('../page_objects/joinus.page')
 const credentials = require('../data/credentials.json');
 let joinus;
 
@@ -11,11 +11,13 @@ test.beforeEach(async ({ page }) => {
 
 // Describe is equivalent of a test suite
 test.describe('Open Roles', () => {
-  
+
   // Test is equivalent of a test case
   test('user should be able to submit application', async ({ page }) => {
+
+    // Test Join Us section
     await joinus.cookiesBtn.click();
-    await joinus.careersBtn.click(); 
+    await joinus.careersBtn.click();
     await joinus.joinUsBtn.click();
     await joinus.openRolesBtn.click();
     await joinus.dataAnalystBtn.click();
@@ -33,7 +35,7 @@ test.describe('Open Roles', () => {
     await joinus.localMetroAreaSelect.click();
     await joinus.submitApplication.click();
     await expect(page).toHaveURL('https://www.metrostar.com/job-post/?gh_jid=5122191003')
-    
+
   });
 
 });
