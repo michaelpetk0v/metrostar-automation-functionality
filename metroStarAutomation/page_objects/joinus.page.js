@@ -26,18 +26,18 @@ exports.JoinUs = class JoinUs {
         this.submitApplication = page.frameLocator('#grnhse_iframe').locator('text=Submit Application');
       
     }
-    async apply(firstname, lastname, email, phonenumber) {
+    async fillOutJobForm(firstname, lastname, email, phonenumber) {
        await this.firstnameInput.fill(firstname);
        await this.lastnameInput.fill(lastname);
        await this.emailInput.fill(email);
        await this.phoneInput.fill(phonenumber);
         
     }
-    async resume(resume) {
+    async fillOutResume(resume) {
         await this.resumeInput.fill(resume);
          
      }
-     async salary(targetsalary) {
+     async fillOutSalaryTarget(targetsalary) {
         await this.salaryInput.fill(targetsalary)
          
      }

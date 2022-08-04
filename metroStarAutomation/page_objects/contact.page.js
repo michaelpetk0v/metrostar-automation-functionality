@@ -12,13 +12,13 @@ exports.Contact = class Contact {
         this.sendMessageBtn = page.locator('[data-reactid=".hbspt-forms-0.5.1"] [type="submit"]');
         this.thankYouPage = page.locator('h2:has-text("thank you")');
     }
-    async contacts(name, email) {
+    async fillOutContactUsForm(name, email) {
         await this.nameInput.fill(name);
         await this.emailInput.fill(email);
         
     }
 
-    async info(details) {
+    async fillOutDetails(details) {
         await this.giveUsDetailsInput.fill(details);
 
     }

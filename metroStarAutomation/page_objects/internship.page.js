@@ -10,7 +10,7 @@ exports.Internship = class Internship {
         this.subscribeBtn = page.locator('text=subscribe');
         this.thankYouPage = page.locator('h2:has-text("thank you")');
     }
-    async subscribe(name, email) {
+    async fillOutChartWithUsForm(name, email) {
        await this.nameInput.fill(name);
        await this.emailInput.fill(email);
        

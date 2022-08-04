@@ -13,13 +13,13 @@ exports.Search = class Search {
         this.submitBtn = page.locator('.hs-submit [type="submit"]');
         this.thankYouPage = page.locator('h2:has-text("thank you")');
     }
-    async form(name, email) {
+    async fillOutContactUsForm(name, email) {
         await this.nameInput.fill(name);
         await this.emailInput.fill(email);
         
     }
 
-    async details(details) {
+    async fillOutDetails(details) {
         await this.giveUsTheDetailsInput.fill(details);
     }
 

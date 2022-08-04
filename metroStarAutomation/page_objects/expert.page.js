@@ -14,7 +14,7 @@ exports.Expert = class Expert {
         this.submitBtn = page.locator('.hs-submit [type="submit"]');
         this.contactAnExpertPage = page.locator('text=contact an expert');
     }
-    async submit(name, email) {
+    async fillOutContactAnExpertForm(name, email) {
         await this.nameInput.fill(name);
         await this.emailInput.fill(email);
         

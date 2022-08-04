@@ -13,7 +13,7 @@ exports.Work = class Work {
         this.submitBtn = page.locator('[class="actions"] [type="submit"]');
         this.missionSuccessPage = page.locator('text=the right team for your mission’s success');
     }
-    async form(name, email) {
+    async fillOutTheRightTeamForm(name, email) {
         await this.nameInput.fill(name);
         await this.emailInput.fill(email);
         
