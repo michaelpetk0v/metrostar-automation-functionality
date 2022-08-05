@@ -1,10 +1,10 @@
-exports.MainMenu = class MainMenu {
+exports.HomePage = class HomePage {
   
     constructor(page) {
       this.page = page;
       this.ourWorkMenuBtn = page.locator(`[data-item-id='177'] .menu-text`);
       this.servicesSolutionsSubMenuBtn = page.locator(`[class='menu-item menu-item-type-post_type menu-item-object-page menu-item-982 fusion-dropdown-submenu'] .fusion-background-highlight span`);
-      this.rdSubMenuBtn = page.locator(`[class='menu-item menu-item-type-post_type menu-item-object-page menu-item-983 fusion-dropdown-submenu'] .fusion-background-highlight span`);
+      this.researchDevelopmentSubMenuBtn = page.locator(`[class='menu-item menu-item-type-post_type menu-item-object-page menu-item-983 fusion-dropdown-submenu'] .fusion-background-highlight span`);
       this.caseStudiesSubMenuBtn = page.locator(`[class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1143 fusion-dropdown-submenu'] .fusion-background-highlight span`);
       this.contractVehiclesSubMenuBtn = page.locator(`[class='menu-item menu-item-type-post_type menu-item-object-page menu-item-249 fusion-dropdown-submenu'] .fusion-background-highlight`);
       this.industiesMenuBtn = page.locator(`[data-item-id='178'] .menu-text`);

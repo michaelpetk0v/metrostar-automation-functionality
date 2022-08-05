@@ -1,4 +1,4 @@
-exports.MainPage = class MainPage {
+exports.Main = class Main {
    
     constructor(page) {
         this.page = page;
