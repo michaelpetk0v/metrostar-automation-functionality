@@ -6,14 +6,13 @@ let search;
 // //Runs each test
 test.beforeEach(async ({ page }) => {
     search = new Search(page);
-    await page.goto('https://www.metrostar.com/');
+    await page.goto('/');
 });
 
 // Describe is equivalent of a test suite
 test.describe('Search', () => {
     // Test is equivalent of a test case
     test('user should be able to use search function', async ({ page }) => {
-        // Test Contact Us section through search bar
         await search.cookiesBtn.click();
         await search.searchBtn.click();
         await search.searchInput.fill('contact us');
@@ -23,7 +22,5 @@ test.describe('Search', () => {
         await search.fillOutContactUsForm(details.searchfunction.name, details.searchfunction.email);
         await search.reasonForContactSelect.selectOption('Job Opportunity');
         await search.fillOutDetails(details.searchfunction.details);
-        await search.submitBtn.click();
-        await expect(search.thankYouPage).toBeVisible();
     });
 });

@@ -13,14 +13,11 @@ test.beforeEach(async ({ page }) => {
 test.describe('Contact Us', () => {
   // Test is equivalent of a test case
   test('user should be able send message', async ({ page }) => {
-    // Test section Contact Us from Contact Us button
     await contact.cookiesBtn.click();
     await contact.contactUsBtn.click();
     await contact.fillOutContactUsForm(details.contactus.name, details.contactus.email);
     await contact.reasonForContactBtn.click();
     await contact.reasonForContactSelect.selectOption('Job Opportunity');
     await contact.fillOutDetails(details.contactus.details);
-    await contact.sendMessageBtn.click();
-    await expect(contact.thankYouPage).toBeVisible();
   });
  });

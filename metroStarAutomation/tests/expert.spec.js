@@ -13,7 +13,6 @@ test.beforeEach(async ({ page }) => {
 test.describe('contact an expert', () => {
   // Test is equivalent of a test case
   test('user should be able to contact an expert', async ({ page }) => {
-    // Test section expert
     await expert.cookiesBtn.click();
     await expert.aboutBtn.click();
     await expert.companyBtn.click();
@@ -24,7 +23,5 @@ test.describe('contact an expert', () => {
     await expert.fillOutContactAnExpertForm(details.contactanexpert.name, details.contactanexpert.email);
     await expert.devSecOpsBtn.click();
     await expert.yourRequestField.fill("Hi there. It's nice to see you again.");
-    await expert.submitBtn.click();
-    await expect(expert.contactAnExpertPage).toBeVisible();
   });
 });
