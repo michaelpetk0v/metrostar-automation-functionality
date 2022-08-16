@@ -14,12 +14,6 @@ exports.Contact = class Contact {
     }
     async fillOutContactUsForm(name, email) {
         await this.nameInput.fill(name);
-        await this.emailInput.fill(email);
-        
-    }
-
-    async fillOutDetails(details) {
-        await this.giveUsDetailsInput.fill(details);
-
+        await this.emailInput.fill(email);   
     }
 }

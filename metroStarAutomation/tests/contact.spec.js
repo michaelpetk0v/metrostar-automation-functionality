@@ -18,6 +18,7 @@ test.describe('Contact Us', () => {
     await contact.fillOutContactUsForm(details.contactus.name, details.contactus.email);
     await contact.reasonForContactBtn.click();
     await contact.reasonForContactSelect.selectOption('Job Opportunity');
-    await contact.fillOutDetails(details.contactus.details);
+    await contact.giveUsDetailsInput.fill("I wish to become part of your team");
+    // We don’t wanna spam you in prod env
   });
  });

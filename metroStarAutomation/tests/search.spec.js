@@ -22,5 +22,6 @@ test.describe('Search', () => {
         await search.fillOutContactUsForm(details.searchfunction.name, details.searchfunction.email);
         await search.reasonForContactSelect.selectOption('Job Opportunity');
         await search.fillOutDetails(details.searchfunction.details);
+        // We don’t wanna spam you in prod env
     });
 });

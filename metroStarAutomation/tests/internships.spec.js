@@ -17,5 +17,6 @@ test.describe('Internships', () => {
     await internship.careersBtn.click();
     await internship.internshipsBtn.click();
     await internship.fillOutChartWithUsForm(details.internship.name, details.internship.email);
+    // We don’t wanna spam you in prod env
   });
 });

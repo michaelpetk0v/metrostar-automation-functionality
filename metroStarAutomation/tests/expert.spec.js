@@ -23,5 +23,6 @@ test.describe('contact an expert', () => {
     await expert.fillOutContactAnExpertForm(details.contactanexpert.name, details.contactanexpert.email);
     await expert.devSecOpsBtn.click();
     await expert.yourRequestField.fill("Hi there. It's nice to see you again.");
+    // We don’t wanna spam you in prod env
   });
 });

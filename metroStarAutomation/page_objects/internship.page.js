@@ -12,7 +12,6 @@ exports.Internship = class Internship {
     }
     async fillOutChartWithUsForm(name, email) {
        await this.nameInput.fill(name);
-       await this.emailInput.fill(email);
-       
+       await this.emailInput.fill(email);  
     }
 }
